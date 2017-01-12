@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% assets "app-css" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+
+    <title>Catalant</title>
+  </head>
+  <body>
+    <div id="app">
+      {% block content %}{% endblock %}
+    </div>
+    {% assets "app-js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+  </body>
+</html>

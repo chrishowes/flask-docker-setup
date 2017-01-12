@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    build: app
+    ports:
+     - "5000:5000"
+    volumes:
+     - ./app:/code
+  mysql:
+    image: mysql
+    volumes:
+     - ./dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
